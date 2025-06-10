@@ -3,7 +3,7 @@ import json
 
 # === Activation functions ===
 def relu(x):
-    # TODO: Implement the Rectified Linear Unit
+
     return np.maximum(0, x)
 
 def softmax(x):
