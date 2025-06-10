@@ -7,12 +7,16 @@ def relu(x):
     return np.maximum(0, x)
 
 def softmax(x):
-    # TODO: Implement the SoftMax function
+  """
+  一個穩健的 Softmax 實現，能同時處理 1D 和 2D 陣列。
+  """
+  # 使用 axis=-1 來確保我們總是在最後一個軸上操作
+  # keepdims=True 是為了讓廣播機制 (broadcasting) 能正確運作
   stable_x = x - np.max(x, axis=-1, keepdims=True)
-  e_x = np.exp(stable_x)
+  exps = np.exp(stable_x)
+  sum_of_exps = np.sum(exps, axis=-1, keepdims=True)
   
-  # 沿著最後一個維度計算總和
-  return e_x / np.sum(e_x, axis=-1, keepdims=True)
+  return exps / sum_of_exps
 
 # === Flatten ===
 def flatten(x):
