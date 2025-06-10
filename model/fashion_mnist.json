@@ -2,7 +2,7 @@
     "module": "keras",
     "class_name": "Sequential",
     "config": {
-        "name": "sequential_4",
+        "name": "sequential_5",
         "trainable": true,
         "dtype": {
             "module": "keras",
@@ -19,45 +19,19 @@
                 "config": {
                     "batch_shape": [
                         null,
-                        28,
-                        28
+                        784
                     ],
                     "dtype": "float32",
                     "sparse": false,
-                    "name": "input_layer_4"
+                    "name": "input_layer_5"
                 },
                 "registered_name": null
             },
             {
                 "module": "keras.layers",
-                "class_name": "Flatten",
-                "config": {
-                    "name": "flatten_2",
-                    "trainable": true,
-                    "dtype": {
-                        "module": "keras",
-                        "class_name": "DTypePolicy",
-                        "config": {
-                            "name": "float32"
-                        },
-                        "registered_name": null
-                    },
-                    "data_format": "channels_last"
-                },
-                "registered_name": null,
-                "build_config": {
-                    "input_shape": [
-                        null,
-                        28,
-                        28
-                    ]
-                }
-            },
-            {
-                "module": "keras.layers",
                 "class_name": "Dense",
                 "config": {
-                    "name": "dense_12",
+                    "name": "dense_15",
                     "trainable": true,
                     "dtype": {
                         "module": "keras",
@@ -101,7 +75,7 @@
                 "module": "keras.layers",
                 "class_name": "Dense",
                 "config": {
-                    "name": "dense_13",
+                    "name": "dense_16",
                     "trainable": true,
                     "dtype": {
                         "module": "keras",
@@ -145,7 +119,7 @@
                 "module": "keras.layers",
                 "class_name": "Dense",
                 "config": {
-                    "name": "dense_14",
+                    "name": "dense_17",
                     "trainable": true,
                     "dtype": {
                         "module": "keras",
@@ -188,16 +162,14 @@
         ],
         "build_input_shape": [
             null,
-            28,
-            28
+            784
         ]
     },
     "registered_name": null,
     "build_config": {
         "input_shape": [
             null,
-            28,
-            28
+            784
         ]
     },
     "compile_config": {
